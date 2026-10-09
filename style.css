@@ -1,7 +1,3 @@
-/* =========================================
-   The Broke Plate - Main Website Styles
-   ========================================= */
-
 :root {
     --text: #050315;
     --background: #fbfbfe;
@@ -9,11 +5,6 @@
     --secondary: #dedcff;
     --accent: #7f3bff;
 }
-
-
-/* =========================================
-   General Page Styles
-   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -23,23 +14,12 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
-    background-color: var(--background);
+    background: var(--background);
     line-height: 1.6;
 }
 
-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* =========================================
-   Header
-   ========================================= */
-
 header {
-    background-color: var(--primary);
+    background: var(--primary);
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -55,14 +35,10 @@ header h1 {
     font-size: 18px;
 }
 
-
-/* =========================================
-   Navigation
-   ========================================= */
-
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -71,25 +47,26 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 8px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-
-/* =========================================
-   Homepage Introduction
-   ========================================= */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .intro {
     text-align: center;
-    padding: 60px 30px;
+    padding: 70px 20px;
 }
 
 .intro h2 {
-    color: var(--primary);
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
@@ -99,44 +76,40 @@ nav a:hover {
     font-size: 18px;
 }
 
-
-/* =========================================
-   Buttons
-   ========================================= */
-
 .button {
     display: inline-block;
-    background-color: var(--accent);
+    background: var(--accent);
     color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
     text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
     font-weight: bold;
 }
 
 .button:hover {
-    background-color: var(--primary);
+    background: var(--primary);
 }
-
-
-/* =========================================
-   Recipe Categories
-   ========================================= */
 
 .categories {
-    padding: 30px 0 60px;
-    text-align: center;
+    padding: 40px 0;
 }
 
-.categories h2 {
+.categories h2,
+.budget-tips h2,
+.newsletter h2,
+.page-intro h2,
+.food-section h2,
+.table-section h2,
+.video-section h2,
+.contact-section h2,
+.contact-info h2,
+.external-resource h2 {
     color: var(--primary);
-    font-size: 32px;
 }
 
+.categories > h2,
 .categories > p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 17px;
+    text-align: center;
 }
 
 .recipe-container {
@@ -147,153 +120,95 @@ nav a:hover {
 }
 
 .recipe-card {
-    background-color: var(--secondary);
-    padding: 30px;
+    background: white;
+    padding: 25px;
     border-radius: 12px;
-    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-card h3 {
     color: var(--primary);
-    font-size: 25px;
     margin-top: 0;
 }
 
 .recipe-card a {
-    color: var(--accent);
+    color: var(--primary);
     font-weight: bold;
 }
 
-
-/* =========================================
-   Budget Tips
-   ========================================= */
-
 .budget-tips {
-    background-color: var(--secondary);
-    padding: 40px 30px;
+    background: var(--secondary);
+    padding: 35px;
     margin: 40px 0;
     border-radius: 12px;
-    text-align: center;
-}
-
-.budget-tips h2 {
-    color: var(--primary);
-    font-size: 30px;
-}
-
-.budget-tips p {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .tip {
-    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .tip h3 {
-    color: var(--accent);
+    color: var(--primary);
 }
-
-
-/* =========================================
-   Newsletter
-   ========================================= */
 
 .newsletter {
     text-align: center;
-    padding: 50px 30px;
+    padding: 50px 20px;
+    margin-bottom: 30px;
 }
 
-.newsletter h2 {
+.newsletter-form {
+    max-width: 800px;
+    margin: 25px auto 0;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-contact {
+    margin-top: 20px;
+}
+
+.newsletter-contact a {
     color: var(--primary);
-    font-size: 30px;
+    font-weight: bold;
 }
-
-.newsletter p {
-    max-width: 700px;
-    margin: 0 auto 25px;
-}
-
-
-/* =========================================
-   Footer
-   ========================================= */
-
-footer {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 50px;
-}
-
-footer p {
-    margin: 5px;
-}
-
-
-/* =========================================
-   Breakfast & Recipe Page Introduction
-   ========================================= */
 
 .page-intro {
     text-align: center;
-    padding: 45px 30px;
-}
-
-.page-intro h2 {
-    color: var(--primary);
-    font-size: 34px;
-    margin-bottom: 15px;
+    padding: 50px 20px 30px;
 }
 
 .page-intro p {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    font-size: 18px;
 }
-
-
-/* =========================================
-   Food Sections
-   ========================================= */
 
 .food-section {
-    margin-top: 45px;
+    padding: 35px 0;
 }
 
-.food-section > h2 {
-    color: var(--primary);
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 15px;
+.food-section > p {
+    max-width: 850px;
 }
-
-.section-description {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 17px;
-}
-
-
-/* =========================================
-   Food Cards
-   ========================================= */
 
 .food-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 25px;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .food-card {
-    background-color: var(--secondary);
+    background: white;
     border-radius: 12px;
     overflow: hidden;
-    padding-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .food-card img {
@@ -307,37 +222,18 @@ footer p {
     padding: 25px;
 }
 
-.food-card h3 {
+.food-content h3 {
     color: var(--primary);
-    font-size: 25px;
-    margin-top: 0;
+    font-size: 24px;
 }
 
-.food-card h4 {
-    color: var(--accent);
+.food-content h4 {
     margin-bottom: 5px;
+    color: var(--accent);
 }
 
-.food-description {
-    font-size: 17px;
-}
-
-.food-card ul {
+.food-content ul {
     padding-left: 20px;
-}
-
-
-/* =========================================
-   Recipe Quick Links
-   ========================================= */
-
-.recipe-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.recipe-links h2 {
-    color: var(--primary);
 }
 
 .quick-links {
@@ -345,26 +241,157 @@ footer p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .quick-links a {
-    background-color: var(--accent);
-    color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 10px 18px;
+    border-radius: 7px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.quick-links a:hover {
-    background-color: var(--primary);
+.table-section {
+    padding: 40px 0;
+}
+
+.table-section p {
+    max-width: 850px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #bdb9c8;
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f1eff8;
 }
 
 
-/* =========================================
-   Mobile Layout
-   ========================================= */
+/* VIDEO */
+
+.video-section {
+    text-align: center;
+    padding: 35px 0 50px;
+}
+
+.video-section h2 {
+    margin-bottom: 15px;
+}
+
+.video-section p {
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+
+/*
+    The TikTok video is vertical, so we do NOT force it
+    to fill the entire page width.
+*/
+
+.video-section video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 650px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #000;
+}
+
+
+/* CONTACT AND FORMS */
+
+.contact-section,
+.contact-info,
+.external-resource {
+    background: white;
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+form {
+    max-width: 800px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: auto;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: var(--accent);
+}
+
+.contact-info a,
+.external-resource a {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -376,10 +403,7 @@ footer p {
         font-size: 30px;
     }
 
-    .recipe-container {
-        grid-template-columns: 1fr;
-    }
-
+    .recipe-container,
     .food-grid {
         grid-template-columns: 1fr;
     }
@@ -389,7 +413,31 @@ footer p {
     }
 
     nav {
-        gap: 12px;
+        gap: 10px;
     }
 
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .contact-section,
+    .contact-info,
+    .external-resource,
+    .newsletter-form {
+        padding: 25px;
+    }
+
+    .video-section video {
+        max-height: 600px;
+    }
 }
